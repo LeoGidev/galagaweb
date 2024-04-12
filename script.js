@@ -190,8 +190,10 @@ function resetGame() {
 function gameOver() {
     ctx.fillStyle = RED;
     ctx.font = "48px Arial";
-    ctx.fillText("GAME OVER", canvas.width / 2 - 150, canvas.height / 2);
-    setTimeout(resetGame, 3000);
+    ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
+    
+    //resetGame();
+    //setTimeout(resetGame, 3000);
 }
 
 // Función principal del juego
