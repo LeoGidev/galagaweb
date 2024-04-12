@@ -188,10 +188,12 @@ function resetGame() {
 
 // Función para manejar el final del juego
 function gameOver() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = RED;
     ctx.font = "48px Arial";
-    ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
-    
+    ctx.fillText("GAME OVER: " + player.lives, 10, 60);
+    //ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
+    console.log("estamo en el reboot");
     //resetGame();
     //setTimeout(resetGame, 3000);
 }
