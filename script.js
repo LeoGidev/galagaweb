@@ -7,6 +7,14 @@ const RED = "#FF0000";
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+// Ajustar el ancho del canvas según el ancho de la pantalla del dispositivo
+if (window.innerWidth < 800) { // Puedes ajustar el valor 800 según tus necesidades
+    canvas.width = window.innerWidth;
+} else {
+    canvas.width = 800; // Ancho predeterminado en caso de ser un dispositivo con una pantalla más grande
+}
+
+
 // Clase para la nave del jugador
 class Player {
     constructor() {
@@ -99,6 +107,31 @@ window.addEventListener("keydown", function (event) {
         resetGame();
     }
 });
+
+// Función para manejar eventos táctiles en dispositivos móviles y tabletas
+canvas.addEventListener("touchstart", function(event) {
+    // Obtener las coordenadas del toque
+    const touchX = event.touches[0].clientX;
+    const touchY = event.touches[0].clientY;
+
+    // Calcular la posición relativa del canvas
+    const canvasRect = canvas.getBoundingClientRect();
+    const canvasX = touchX - canvasRect.left;
+    const canvasY = touchY - canvasRect.top;
+
+    // Determinar si el toque está a la izquierda o a la derecha del jugador
+    if (canvasX < player.x + player.width / 2) {
+        player.move("left");
+    } else {
+        player.move("right");
+    }
+});
+
+// Función para manejar el final del toque en dispositivos móviles y tabletas
+canvas.addEventListener("touchend", function(event) {
+    // No se necesitan acciones adicionales al final del toque
+});
+
 
 // Función para dibujar el juego
 function draw() {
