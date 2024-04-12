@@ -161,6 +161,7 @@ function checkCollisions() {
             player.y < enemy.y + enemy.height &&
             player.y + player.height > enemy.y
         ) {
+            enemies.splice(enemies.indexOf(enemy), 1);
             player.lives--;
             if (player.lives < 0) {
                 gameOver();
