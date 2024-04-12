@@ -112,6 +112,7 @@ function draw() {
 
     drawScore();
     drawLives();
+    gameOver();
 }
 
 // Función para actualizar la lógica del juego
@@ -163,12 +164,7 @@ function checkCollisions() {
         ) {
             enemies.splice(enemies.indexOf(enemy), 1);
             player.lives--;
-            if (player.lives < 0) {
-                gameOver();
-            } else {
-                player.x = canvas.width / 2 - player.width / 2;
-                player.y = canvas.height - player.height;
-            }
+            
         }
     });
 }
@@ -188,14 +184,20 @@ function resetGame() {
 
 // Función para manejar el final del juego
 function gameOver() {
+    if (player.lives < 0) {
+    
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = RED;
     ctx.font = "48px Arial";
-    ctx.fillText("GAME OVER: " + player.lives, 10, 60);
-    //ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
+    ctx.fillText("GAME OVER", canvas.width / 2 - 100, canvas.height / 2 - 24);
+    ctx.fillText("Presione R para reiniciar", canvas.width / 2 - 140, canvas.height / 2 + 24);
+
     console.log("estamo en el reboot");
-    //resetGame();
-    //setTimeout(resetGame, 3000);
+   
+}
+    else{
+        console.log("ok");
+    }
 }
 
 // Función principal del juego
