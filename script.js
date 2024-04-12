@@ -162,7 +162,7 @@ function checkCollisions() {
             player.y + player.height > enemy.y
         ) {
             player.lives--;
-            if (player.lives === 0) {
+            if (player.lives < 0) {
                 gameOver();
             } else {
                 player.x = canvas.width / 2 - player.width / 2;
