@@ -190,7 +190,7 @@ function gameOver() {
     ctx.fillStyle = RED;
     ctx.font = "48px Arial";
     ctx.fillText("GAME OVER", canvas.width / 2 - 150, canvas.height / 2 - 24);
-    ctx.fillText("Presione R para reiniciar", canvas.width / 2 - 200, canvas.height / 2 + 24);
+    ctx.fillText("Presione R para reiniciar", canvas.width / 2 - 260, canvas.height / 2 + 24);
 
     console.log("estamo en el reboot");
    
