@@ -113,6 +113,7 @@ function draw() {
     drawScore();
     drawLives();
     gameOver();
+    gamewin();
 }
 
 // Función para actualizar la lógica del juego
@@ -192,12 +193,24 @@ function gameOver() {
     ctx.fillText("GAME OVER", canvas.width / 2 - 150, canvas.height / 2 - 24);
     ctx.fillText("Presione R para reiniciar", canvas.width / 2 - 260, canvas.height / 2 + 24);
 
-    console.log("estamo en el reboot");
+   
    
 }
     else{
         console.log("ok");
     }
+}
+
+function gamewin(){
+    if(enemies.length < 1){
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = RED;
+        ctx.font = "48px Arial";
+        ctx.fillText("¡¡HAS GANADO!!", canvas.width / 2 - 150, canvas.height / 2 - 24);
+        ctx.fillText("Presione R para reiniciar", canvas.width / 2 - 260, canvas.height / 2 + 24);
+
+    }
+
 }
 
 // Función principal del juego
