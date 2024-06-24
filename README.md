@@ -3,4 +3,4 @@
 ![imagen ilustratuva](example1.png)
 
 
-Puedes probarla en mi Portafolio:[ir](https://leogidev.free.nf/Practicas/Reloj/)
+Puedes probarla en mi Portafolio:[ir](https://github.com/LeoGidev/galagaweb)
