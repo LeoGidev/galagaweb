@@ -1,0 +1,117 @@
+
+@font-face {
+    font-family: 'digital-7regular';
+    src: url('digital-7-webfont.woff2') format('woff2'),
+         url('digital-7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  nav{
+    background-color: #000;
+  }
+  body {
+    background-image: url('../recursos/fondo.webp');
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: white;
+    
+  }
+  
+  canvas {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(8, 7, 13);
+    
+}
+  
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Centra verticalmente el contenido en la parte inferior */
+    
+    
+  }
+ 
+   .contenido2 {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.059);
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 69px;
+  }
+  .contenido3 {
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-grow: 1; /* Permitir crecer dinÃ¡micamente */
+    margin-top: 20px;
+  }
+
+  .contenido4 {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.059);
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0px;
+  }
+  
+  .contenido3 img {
+    width: 100px;
+    filter: drop-shadow(1px 1px 2px rgba(255, 255, 255, 0.239));
+    transition: 2s;
+  }
+  .contenido3 img:hover{
+    filter: drop-shadow(1px 1px 2px rgba(255, 255, 255, 0));
+    background-color: #d3d3d340;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 2s;
+    border:8px solid #201d2a;
+    box-shadow: 1px 1px 1px rgba(55, 55, 55, 0.397);
+  }
+   .controles{
+    display: flex;
+    justify-content:space-around;
+   }
+
+   .controles button{
+    padding: 10px;
+    background-color: #2c275d;
+    color: white;
+    font-size: 20px;
+    border: none;
+   }
+
+   .controles .izq{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px ;
+
+   }
+   .controles .der{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px ;
+
+   }
+   .shoot{
+    border-radius: 10px;
+   }
+
+   .controles button:hover,
+   .controles button:active{
+    border:2px solid white;
+    scale:0.9;
+    font-size:18;
+   }
+   .dropdown-menu {
+    max-height: 80vh; 
+    overflow-y: auto;
+  }
