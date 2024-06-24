@@ -1,5 +1,5 @@
 # Galaga Asteroid
-## Se programa a modo de práctica un sencillo reloj con calendario.
+## Este pequeño juego en Javascript es un ejemplo de práctica.
 ![imagen ilustratuva](example1.png)
 
 
