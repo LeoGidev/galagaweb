@@ -1,5 +1,5 @@
 # Galaga Asteroid
-## Este pequeño juego en Javascript es un ejemplo de práctica.
+## Este pequeño juego en Javascript es un ejemplo de práctica del uso de canva.
 ![imagen ilustratuva](example.png)
 
 
